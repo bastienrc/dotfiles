@@ -1,0 +1,4 @@
+Bundle 'mattn/zencoding-vim'
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-shell'
+Bundle 'shemerey/vim-project'
