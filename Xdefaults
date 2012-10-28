@@ -1,0 +1,82 @@
+!!!Apparence
+!Titre du Terminal
+urxvt.title:        Ulysse
+urxvt.termName:     rxvt-256color
+
+!Taille par défaut
+urxvt.geometry:     90x20
+
+!Gestion de la vrai transparence
+!urxvt.depth:        32
+!Couleur de l'arriere plan (rgba = red green blue alpha)
+!vim.background: rgb:0000/2B2B/3636
+!urxvt.background: rgba:0000/2B2B/3636/eeee
+
+!La touche meta est la touche Windows
+urxvt.modifier :    mod4
+
+!Barre de défilement
+urxvt.scrollBar:    false
+
+!Desactive/Active la bordure
+urxvt.borderLess:   true
+
+!Police TTF
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
+urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13
+urxvt.xftAntialias: true
+
+!!!Option
+!Taille du buffer
+urxvt.saveLines:    3000
+
+! Anti-Stress
+urxvt.cursorBlink:      false
+urxvt.cursorColor:      #FFA500
+urxvt.cursorColor2:     #FFFFFF
+
+! Couleur du Man
+urxvt.colorIT:          #BBBBBB
+urxvt.colorBD:          #20E7F8
+urxvt.colorUL:          #DB00FF
+urxvt.colorBDMode:      true
+urxvt.colorULMode:      true
+urxvt.tintColor:        white
+urxvt.internalBorder:   0
+urxvt.dynamicColors:    on
+
+! Configure correctement C-Left et C-Right sous rxvt
+! (sinon affiche des 'c' et 'd')
+urxvt.keysym.C-Left:  \033[1;5D
+urxvt.keysym.C-Right: \033[1;5C
+
+!!! Couleurs
+! Urxvt fonctionnant en 256 couleurs (On ne definis que les couleurs de bases)
+! Les couleurs de 0 à 7 sont les couleurs de base et
+! les couleurs de 8 à 15 sont utilisées pour la mise en valeur.
+! Voir .Xresources
+
+!Ouvrent les liens dans iceweasel
+! URxvt.perl-ext-common : default,matcher
+! URxvt.urlLauncher     : iceweasel
+! URxvt.matcher.button  : 1
+
+!Quake like terminal
+!URxvt.perl-ext-common : quake
+
+!! On active les modules nécessaires
+URxvt.perl-lib: ~/.urxvt/
+
+URxvt.perl-ext: selection,mark-and-yank
+!! On défint comment passer en mode "copie": ctrl-y
+URxvt.keysym.M-y: perl:mark-and-yank:activate_mark_mode
+
+!! on active les modules nécessaires
+URxvt.perl-ext: selection,mark-yank-urls
+!! on définit comment passer en mode "copie d'url": ici il s'agit de alt-u
+URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+
+!! on peut choisir de souligner les urls
+URxvt.underlineURLs: true
+!! on définit ici le navigateur par défaut (pour lancer une url sélectionnée avec entrée)
+URxvt.urlLauncher: iceweasel 
