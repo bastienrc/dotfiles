@@ -51,7 +51,7 @@ temperature_unit celsius
 default_color FFFFFF
 
 # Lua Load  #
-lua_load ~/Projects/dotfiles/conky/clock_rings.lua
+lua_load ~/.dotfiles/conky/clock_rings.lua
 lua_draw_hook_pre clock_rings
 
 TEXT
@@ -59,7 +59,7 @@ ${voffset 8}${color D60650}${font Caviar Dreams:size=16}${time %A}${font}${voffs
 ${color FFFFFF}${voffset -30}${color FFFFFF}${font Caviar Dreams:size=18}${time %b}${font}${voffset -3} ${color FFFFFF}${font Caviar Dreams:size=20}${time %Y}${font}${color D60650}${hr}
 ${voffset 140}${font Caviar Dreams:size=10}${alignr}HOME${font}
 ${font Caviar Dreams:size=12}${color FFFFFF}${alignr}${weather http://weather.noaa.gov/pub/data/observations/metar/stations/ LQBK temperature temperature 30} °C${font}
-${image ~/Projects/dotfiles/conky/debian-logo.png -p 68,120 -s 60x60}
+${image ~/.dotfiles/conky/debian-logo.png -p 68,120 -s 60x60}
 
 ${color FFFFFF}${goto 25}${voffset 35}${cpu cpu0}%
 ${color D60650}${goto 25}CPU

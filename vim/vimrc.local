@@ -4,7 +4,26 @@
 """                                                                          """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Solarized
+" option name default optional
+" "normal"| "high" or "low"
+"------------------------------------------------
+let g:solarized_termcolors = 256
+" let g:solarized_termtrans  = 1
+" let g:solarized_degrade  = 0
+let g:solarized_bold       = 1
+let g:solarized_underline  = 1
+let g:solarized_italic     = 1
+let g:solarized_contrast   = "high"
+let g:solarized_visibility = "high"
+" ------------------------------------------------
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 colorscheme solarized
+
 
 source $HOME/.dotfiles/vim/abbreviations/abb.vim
 set dictionary+=$HOME/.dotfiles/vim/dictionary/mydico.dict

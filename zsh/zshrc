@@ -247,3 +247,5 @@ zstyle ':completion:*' use-compctl false
 
 autoload -U compinit
 compinit
+
+#source ~/.dotfiles/zsh/agnoster.zsh-theme
