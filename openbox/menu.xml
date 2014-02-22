@@ -9,9 +9,9 @@
 					</execute>
 				</action>
 			</item>
-			<item label="Gvim">
+			<item label="KeepNote">
 				<action name="Execute">
-					<execute>gvim</execute>
+					<execute>keepnote</execute>
 				</action>
 			</item>
 			<item label="Geany">
@@ -21,9 +21,19 @@
 					</execute>
 				</action>
 			</item>
+			<item label="Kicad">
+				<action name="Execute">
+					<execute>kicad</execute>
+				</action>
+			</item>
 		</menu>
 		<!-- This requires the presence of the 'menu' package to work -->
 		<menu id="game" label="Jeux">
+			<item label="Feed The Beast">
+				<action name="Execute">
+					<execute>java -jar ~/Bureau/FTB_Launcher.jar</execute>
+				</action>
+			</item>
 			<item label="Minecraft">
 				<action name="Execute">
 					<execute>java -jar ~/Bureau/minecraft.jar</execute>
@@ -67,13 +77,6 @@
 				<action name="Execute">
 					<execute>
 						vlc
-					</execute>
-				</action>
-			</item>
-			<item label="Icedove">
-				<action name="Execute">
-					<execute>
-						icedove
 					</execute>
 				</action>
 			</item>
@@ -192,6 +195,11 @@
 				</action>
 			</item>
 		</menu>
+		<item label="Pdfmod">
+			<action name="Execute">
+				<execute>pdfmod</execute>
+			</action>
+		</item>
 		<menu id="graphisme" label="Graphisme">
 			<item label="Gimp">
 				<action name="Execute">
@@ -242,6 +250,11 @@
 					<execute>nautilus --no-desktop</execute>
 				</action>
 			</item>
+			<item label="Glogg">
+				<action name="Execute">
+					<execute>glogg</execute>
+				</action>
+			</item>
 			<item label="Synaptic">
 				<action name="Execute">
 					<execute>
@@ -253,13 +266,6 @@
 				<action name="Execute">
 					<execute>
 						nitrogen ~/.wallpaper
-					</execute>
-				</action>
-			</item>
-			<item label="Cover Thumbnailer">
-				<action name="Execute">
-					<execute>
-						cover-thumbnailer-gui
 					</execute>
 				</action>
 			</item>
