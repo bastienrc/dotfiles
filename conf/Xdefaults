@@ -1,0 +1,74 @@
+!--------------!
+! Xft Settings !
+!--------------!
+  Xft.antialias:              false
+  Xft.dpi:                    96
+  Xft.hinting:                true
+  Xft.hintstyle:              hintslight
+  Xft.rgba:                   rgb
+
+
+!----------------!
+! URxvt Settings !
+!----------------!
+
+  !Titre du Terminal
+  URxvt.title:                Andromeda
+  URxvt.imLocale:             fr_FR.UTF-8
+  URxvt.saveLines:            500
+  URxvt.termName:             rxvt-unicode-256color
+
+  !Gestion de la vrai transparence
+  !URxvt.depth:                32
+  !Couleur de l'arriere plan (rgba = red green blue alpha)
+  !URxvt.background:           rgba:0000/2B2B/3636/eeee
+
+  !Taille par défaut largeur x hauteur + x + y
+  ! largeur et hauteur en caractères
+  ! x et y par rapport au coin gauche haut (en px)
+  URxvt.geometry:             90x20+350+200
+
+  !Barre de défilement
+  URxvt.scrollBar:            false
+
+  !Desactive/Active la bordure
+  !URxvt.borderLess:           true
+
+  !Police TTF
+  URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12
+  URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:size=12
+  URxvt.xftAntialias: true
+
+  ! Anti-Stress
+  URxvt.cursorBlink:      false
+  URxvt.cursorColor:      #FFA500
+  URxvt.cursorColor2:     #FFFFFF
+
+  ! Couleur du Man
+  URxvt.colorIT:          #BBBBBB
+  URxvt.colorBD:          #20E7F8
+  URxvt.colorUL:          #DB00FF
+  URxvt.colorBDMode:      true
+  URxvt.colorULMode:      true
+  URxvt.tintColor:        white
+  URxvt.internalBorder:   0
+  URxvt.dynamicColors:    on
+
+  ! Navigateur par défaut (pour lancer une url sélectionnée avec entrée)
+  URxvt.urlLauncher: iceweasel
+
+  !! on peut choisir de souligner les urls
+  URxvt.underlineURLs: true
+
+
+!--------------------------!
+! URxvt Extension Settings !
+!--------------------------!
+  URxvt.matcher.button:       1
+
+
+!------------------!
+! Xcursor Settings !
+!------------------!
+  Xcursor.theme:              Ecliz
+  Xcursor.size:               16

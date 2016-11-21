@@ -1,0 +1,19 @@
+#!/bin/bash
+# Installation de ma configuration
+
+# Couleur
+ln -sf `pwd`/conf/face ~/.face
+ln -sf `pwd`/conf/Xdefaults ~/.Xdefaults
+ln -sf `pwd`/conf/Xresources ~/.Xresources
+
+# Git
+ln -sf `pwd`/conf/gitconfig ~/.gitconfig
+
+# Npm
+ln -sf `pwd`/conf/npmrc ~/.npmrc
+
+# Zsh
+ln -sf `pwd`/conf/zshrc ~/.zshrc
+ln -sf `pwd`/conf/zshenv ~/.zshenv
+ln -sf `pwd`/conf/zlogin ~/.zlogin
+ln -sf `pwd`/conf/zlogout ~/.zlogout

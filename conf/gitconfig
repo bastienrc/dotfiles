@@ -1,0 +1,21 @@
+[user]
+  name = Bastienrc
+  email = bastienrc@laposte.net
+[core]
+  editor = atom
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  interactive = auto
+  ui = true
+[alias]
+  br = branch
+  ci = commit -a
+  co = checkout
+  sh = show --color-words
+  st = status
+[credential]
+  helper = cache
+[push]
+  default = simple
