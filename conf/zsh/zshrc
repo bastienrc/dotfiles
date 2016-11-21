@@ -1,8 +1,20 @@
 # Fichier de configuration principal de zsh
 
-################
-# 1. Les alias #
-################
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="agnoster"
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+# User configuration
+
+
+# Les alias
 
 # Gestion du 'ls' : couleur & ne touche pas aux accents
 alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
@@ -19,9 +31,6 @@ alias lla='ls -la'
 
 # Git
 alias st='git status'
-alias svnpull='git svnpull'
-alias svnpush='git svnpush'
-alias climerge='git climerge'
 alias pullr='git pull --rebase'
 alias pull='git pull'
 alias push='git push'
@@ -32,18 +41,20 @@ alias less='less --quiet'
 alias s='cd ..'
 alias df='df --human-readable'
 alias du='du --human-readable'
-alias m='mutt -y'
 alias md='mkdir'
 alias rd='rmdir'
 alias upgrade='sudo aptitude update && sudo aptitude dist-upgrade && sudo aptitude clean'
 alias grep='grep --color=auto'
-alias majdroits='sudo sh ~/.sh/majdroits.sh'
-alias backup='sh ~/.sh/backup/backup.sh'
+alias node="nodejs"
+
+# Alias pour mes scripts
+alias majdroits='sudo sh ~/.scripts/majdroits'
+
+# Vim
 alias vimbundle='vim +BundleInstall! +BundleClean +q'
 
-#######################################
-# 2. Prompt et définition des touches #
-#######################################
+
+# Prompt et définition des touches
 
 # Exemple : ma touche HOME, cf  man termcap, est codifiee K1 (upper left
 # key  on keyboard)  dans le  /etc/termcap.  En me  referant a  l'entree
@@ -115,9 +126,7 @@ then
 fi
 
 
-###########################################
-# 3. Options de zsh (cf 'man zshoptions') #
-###########################################
+# Options de zsh (cf 'man zshoptions') #
 
 # Je ne veux JAMAIS de beeps
 unsetopt beep
@@ -198,9 +207,7 @@ unsetopt bg_nice
 unsetopt hup
 
 
-###############################################
-# 4. Paramètres de l'historique des commandes #
-###############################################
+# Paramètres de l'historique des commandes
 
 # Nombre d'entrées dans l'historique
 export HISTORY=1000
@@ -237,9 +244,7 @@ setopt hist_expire_dups_first
 setopt hist_find_no_dups
 
 
-###########################################
-# 5. Complétion des options des commandes #
-###########################################
+# Complétion des options des commandes
 
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}'
 zstyle ':completion:*' max-errors 3 numeric
@@ -248,4 +253,4 @@ zstyle ':completion:*' use-compctl false
 autoload -U compinit
 compinit
 
-#source ~/.dotfiles/zsh/agnoster.zsh-theme
+source $ZSH/oh-my-zsh.sh

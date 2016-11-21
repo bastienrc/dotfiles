@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+echo "Mise à jour des droits"
+
+sudo chown -R bastienrc:www-data ~/Lab
+sudo chmod -R 756 ~/Lab
+
+echo "Mise à jour terminer"

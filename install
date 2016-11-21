@@ -13,10 +13,11 @@ ln -sf `pwd`/conf/gitconfig ~/.gitconfig
 ln -sf `pwd`/conf/npmrc ~/.npmrc
 
 # Zsh
-ln -sf `pwd`/conf/zshrc ~/.zshrc
-ln -sf `pwd`/conf/zshenv ~/.zshenv
-ln -sf `pwd`/conf/zlogin ~/.zlogin
-ln -sf `pwd`/conf/zlogout ~/.zlogout
+ln -sf `pwd`/conf/zsh/zshrc ~/.zshrc
+ln -sf `pwd`/conf/zsh/zshenv ~/.zshenv
+ln -sf `pwd`/conf/zsh/zlogin ~/.zlogin
+ln -sf `pwd`/conf/zsh/zlogout ~/.zlogout
 
 # Conky
-conky -c `pwd`/conf/conky/conkyrc
+ln -sf `pwd`/conf/conky ~/.conky
+#conky -c ~/.conky/conkyrc
