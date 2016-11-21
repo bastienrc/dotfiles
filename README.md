@@ -1,4 +1,4 @@
-dotfiles
+Dotfiles
 ========
 
-My config files
+Mes fichiers de configurations
