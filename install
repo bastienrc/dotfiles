@@ -5,6 +5,11 @@
 ln -sf `pwd`/conf/face ~/.face
 ln -sf `pwd`/conf/Xdefaults ~/.Xdefaults
 ln -sf `pwd`/conf/Xresources ~/.Xresources
+ln -sf `pwd`/conf/fonts ~/.fonts
+
+# Mes scripts
+ln -sf `pwd`/scripts ~/.scripts
+git submodule update --init
 
 # Git
 ln -sf `pwd`/conf/gitconfig ~/.gitconfig
@@ -17,6 +22,7 @@ ln -sf `pwd`/conf/zsh/zshrc ~/.zshrc
 ln -sf `pwd`/conf/zsh/zshenv ~/.zshenv
 ln -sf `pwd`/conf/zsh/zlogin ~/.zlogin
 ln -sf `pwd`/conf/zsh/zlogout ~/.zlogout
+ln -sf `pwd`/externe/oh-my-zsh ~/.oh-my-zsh
 
 # Conky
 ln -sf `pwd`/conf/conky ~/.conky
