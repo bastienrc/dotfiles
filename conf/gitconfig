@@ -1,6 +1,7 @@
 [user]
   name = Bastienrc
   email = bastienrc@laposte.net
+	signingkey = 55FEFD8F2C7ECF15
 [core]
   editor = atom
 [color]
@@ -19,3 +20,5 @@
   helper = cache
 [push]
   default = simple
+[commit]
+	gpgsign = true
