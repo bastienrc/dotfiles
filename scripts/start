@@ -1,0 +1,10 @@
+#!/bin/zsh
+# Script exécuter au démarrage de Xfce4
+#
+
+# Démarage de mes containers
+# Laradock
+cd /data/Lab/laradock && docker-compose up -d nginx mysql phpmyadmin
+
+# Portainer
+cd /data/Lab/Portainer && docker-compose up -d
