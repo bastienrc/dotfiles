@@ -1,6 +1,7 @@
 !--------------!
 ! Xft Settings !
 !--------------!
+
   Xft.antialias:              false
   Xft.dpi:                    96
   Xft.hinting:                true
@@ -17,11 +18,13 @@
   URxvt.imLocale:             fr_FR.UTF-8
   URxvt.saveLines:            500
   URxvt.termName:             rxvt-unicode-256color
+  URxvt.iconFile: /usr/share/icons/Faenza/apps/64/utilities-terminal.png
 
   !Gestion de la vrai transparence
   !URxvt.depth:                32
   !Couleur de l'arriere plan (rgba = red green blue alpha)
   !URxvt.background:           rgba:0000/2B2B/3636/eeee
+  URxvt.background:           #424242
 
   !Taille par défaut largeur x hauteur + x + y
   ! largeur et hauteur en caractères
@@ -55,16 +58,18 @@
   URxvt.dynamicColors:    on
 
   ! Navigateur par défaut (pour lancer une url sélectionnée avec entrée)
-  URxvt.urlLauncher: iceweasel
+  URxvt.urlLauncher: /usr/bin/x-www-browser
 
   !! on peut choisir de souligner les urls
   URxvt.underlineURLs: true
 
+  ! Clickble URLs
+  URxvt.perl-ext-common: default,matcher
 
 !--------------------------!
 ! URxvt Extension Settings !
 !--------------------------!
-  URxvt.matcher.button:       1
+  URxvt.matcher.button:       3
 
 
 !------------------!
