@@ -46,7 +46,7 @@ alias upgrade='sudo aptitude update && sudo aptitude dist-upgrade && sudo aptitu
 alias grep='grep --color=auto'
 
 # Alias pour mes scripts
-alias majdroits='sudo sh ~/.scripts/majdroits'
+# alias majdroits='sudo sh ~/.scripts/majdroits'
 
 # Laradock
 alias laradock-up='cd /data/Lab/laradock && docker-compose up -d nginx mysql phpmyadmin'
