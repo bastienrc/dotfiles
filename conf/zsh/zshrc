@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Theme ( ~/.oh-my-zsh/themes/)
 # ZSH_THEME="agnoster"
 ZSH_THEME="gallifrey"
-DEFAULT_USER="bastienrc" # Cache le "user@hostname" en local
+DEFAULT_USER="Bastienrc" # Cache le "user@hostname" en local
 
 # Mes customisations, tel que mes Alias
 ZSH_CUSTOM=$HOME/.zsh_custom
