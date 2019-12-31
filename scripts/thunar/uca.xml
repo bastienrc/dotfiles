@@ -1,0 +1,410 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Ouvrir un terminal ici</name>
+	<unique-id>1495049745990754-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Exemple d&apos;une action personnalisée</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>system-search</icon>
+	<name>Disk Usage</name>
+	<unique-id>1555391264364664-1</unique-id>
+	<command>baobab %d</command>
+	<description>Recherche de fichiers</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>application-javascript</icon>
+	<name>YUI Compressor test</name>
+	<unique-id>1537800730141829-8</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/yuicompressor.sh %f</command>
+	<description>Do a test run to see if a JavaScript file can be compressed with YUI Compressor</description>
+	<patterns>*.js</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/devices/media-optical.png</icon>
+	<name>Mount iso/nrg</name>
+	<unique-id>1376297231254718-1</unique-id>
+	<command>/data/Lab/dotfiles/scripts/thunar/thunar/mount-iso.sh %f</command>
+	<description>Mount iso/nrg to /media/cdrom0 requires sudo nopassword mount/umount</description>
+	<patterns>*.iso;*.nrg;*.ISO;*.NRG;*.fex</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/categories/applications-system.png</icon>
+	<name>Generate code</name>
+	<unique-id>1369723703661790-2</unique-id>
+	<command>/data/Lab/dotfiles/scripts/thunar/thunar/code_generation.sh %f</command>
+	<description>Generate template .php code from .dia class diagram</description>
+	<patterns>*.dia</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/image-x-generic.png</icon>
+	<name>Save as jpg</name>
+	<unique-id>1396167335718282-5</unique-id>
+	<command>convert -quality 75 -density 150x150 %f %f.jpg</command>
+	<description>Save .pdf file as jpg file (fixme %d option not working 
+convert -quality 100 -density 600x600 multipage.pdf single%d.jpg)</description>
+	<patterns>*.pdf;*.PDF</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/image-x-generic.png</icon>
+	<name>Save as png</name>
+	<unique-id>1369723703661829-4</unique-id>
+	<command>dia -e %f.png -t png %f</command>
+	<description>Save .dia file as png file</description>
+	<patterns>*.dia</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/image-x-generic.png</icon>
+	<name>Show thumbnail</name>
+	<unique-id>1387200523652855-11</unique-id>
+	<command>/data/Lab/dotfiles/scripts/thunar/thunar/thumbnail.sh %f %n</command>
+	<description>Generate a single thumbnail</description>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/image-x-generic.png</icon>
+	<name>Show mosaic</name>
+	<unique-id>1387201042501552-12</unique-id>
+	<command>/data/Lab/dotfiles/scripts/thunar/thunar/thumbnail-mosaic.sh %f %n</command>
+	<description>Generate multiple screenshots into a mosaic </description>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/media-playback-start.png</icon>
+	<name>Play selected files</name>
+	<unique-id>1396167305237321-4</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/generate-playlist.sh %F</command>
+	<description>Play selected files with mplayer</description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/categories/applications-multimedia.png</icon>
+	<name>Convert to web standards</name>
+	<unique-id>1369723703661907-11</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/video.sh %f %d %n</command>
+	<description>Convert any video to webm, mp4, ogv and flv for web playback</description>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/categories/applications-multimedia.png</icon>
+	<name>Convert video to MPG (mpeg2)</name>
+	<unique-id>1369723703661917-12</unique-id>
+	<command>xfce4-terminal -x ffmpeg -i %f %f.mpg</command>
+	<description>Playback on digital photo frames etc.</description>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/format-indent-more.png</icon>
+	<name>Resize PDF to SCREEN quality</name>
+	<unique-id>1436186608040852-1</unique-id>
+	<command>gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=%fresized.pdf %f</command>
+	<description></description>
+	<patterns>*.pdf;*.PDF</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/go-down.png</icon>
+	<name>Download torrent</name>
+	<unique-id>1369723703661927-13</unique-id>
+	<command>btdownloadgui --max_upload_rate 45 %f</command>
+	<description>Download torrent with upload limit 45k</description>
+	<patterns>*.torrent;*.TORRENT</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/package-x-generic.png</icon>
+	<name>Extract here (tar, tar.gz, tar.bz2, gzip)</name>
+	<unique-id>1369723703661939-14</unique-id>
+	<command>mkdir %Nex;cd %Nex;tar -xf %F</command>
+	<description>Extract without dialogs</description>
+	<patterns>*.tar;*.TAR;*.gz;*.GZ;*.tar.bz2;*.TAR.BZ2;*.gzip;*.GZIP;*.tgz</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/package-x-generic.png</icon>
+	<name>Extract here (zip)</name>
+	<unique-id>1369723703661952-15</unique-id>
+	<command>mkdir %Nex;cd %Nex;unzip %F</command>
+	<description>Extract without dialogs</description>
+	<patterns>*.zip;*.ZIP</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/package-x-generic.png</icon>
+	<name>Extract here (rar)</name>
+	<unique-id>1369723703661964-16</unique-id>
+	<command>mkdir %Nex;cd %Nex;unrar x %F</command>
+	<description>Extract without dialogs</description>
+	<patterns>*.rar;*.RAR;*.r0*;*.R0*;*.*01</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/package-x-generic.png</icon>
+	<name>Extract here (7zip)</name>
+	<unique-id>1369723703661974-17</unique-id>
+	<command>mkdir %Nex;cd %Nex;7za x %F</command>
+	<description>Extract without dialogs</description>
+	<patterns>*.7z</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/application-certificate.png</icon>
+	<name>Encrypt/decrypt file (gpg)</name>
+	<unique-id>1369723703661988-18</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/gpg.sh %F</command>
+	<description>Decrypt or encrypt the selected file with gnupg</description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/package-x-generic.png</icon>
+	<name>Add to archive (.zip)</name>
+	<unique-id>1369723703662000-19</unique-id>
+	<command>zip -r %f.zip %N</command>
+	<description>Add to .zip archive without dialogs</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/package-x-generic.png</icon>
+	<name>Add to archive (.tar.gz)</name>
+	<unique-id>1369723703662011-20</unique-id>
+	<command>tar -pczf %f.tar.gz %N</command>
+	<description>Add to .tar.gz archive without dialogs</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/status/dialog-information.png</icon>
+	<name>Get size</name>
+	<unique-id>1395053668931560-12</unique-id>
+	<command>xfce4-terminal --geometry=125x40 -x /data/Lab/dotfiles/scripts/thunar/thunar/directory-getsize.sh %F</command>
+	<description>Displays the total size of selected items</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/status/dialog-information.png</icon>
+	<name>File details</name>
+	<unique-id>1418997274600390-10</unique-id>
+	<command>xfce4-terminal -x /home/bar/Scripts/thunar/thunar/file-details.sh %F</command>
+	<description>Show file details (ls -halZ)</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/mail-message-new.png</icon>
+	<name>Send to mail</name>
+	<unique-id>1396168346141063-6</unique-id>
+	<command>icedove -compose subject=&apos;Sending file as requested&apos;,body=&apos;Sending file as requested&apos;,attachment=&apos;%f&apos;</command>
+	<description>Send this file via email</description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/system-search.png</icon>
+	<name>Search here</name>
+	<unique-id>1395063180314727-1</unique-id>
+	<command>xfce4-terminal --geometry=125x40 -x /data/Lab/dotfiles/scripts/thunar/thunar/find-file-and-open.sh %f</command>
+	<description>Recursive search files and open them</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/system-search.png</icon>
+	<name>Search &gt; size</name>
+	<unique-id>1395054694219757-17</unique-id>
+	<command>xfce4-terminal --geometry=125x40 -x /data/Lab/dotfiles/scripts/thunar/thunar/find-by-size-and-open.sh %f</command>
+	<description>Find files larger than size</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/edit-find.png</icon>
+	<name>Find in files</name>
+	<unique-id>1395053319187479-11</unique-id>
+	<command>xfce4-terminal --geometry=125x40 -x /data/Lab/dotfiles/scripts/thunar/thunar/find-in-files-and-open.sh %f</command>
+	<description>Recursive search for a string in files and open them</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/edit-find-replace.png</icon>
+	<name>Find and replace recursive in files</name>
+	<unique-id>1395057832812689-19</unique-id>
+	<command>xfce4-terminal --geometry=125x40 -x /data/Lab/dotfiles/scripts/thunar/thunar/search-and-replace.sh %f</command>
+	<description>DANGEROUS! Find and replace recursive in files</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/image-x-generic.png</icon>
+	<name>Resize to 1000x1000</name>
+	<unique-id>1369723703662093-28</unique-id>
+	<command>cd %n;mkdir resized;cp %F resized;cd resized;mogrify -resize 1000x1000 *</command>
+	<description>Make a copy and resize the selected JPG images to 1000x1000</description>
+	<patterns>*.jpg;*.JPG;*.jped;*.jpeg</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/image-x-generic.png</icon>
+	<name>Autorotate JPG</name>
+	<unique-id>1369723703662106-29</unique-id>
+	<command>jhead -autorot %F; jhead -norot %F;</command>
+	<description>Rotate JPG human orientation, clear exif rotate bit</description>
+	<patterns>*.jpg;*.JPG</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/text-x-script.png</icon>
+	<name>Decode .base64 file</name>
+	<unique-id>1369723703662137-32</unique-id>
+	<command>base64 -d %f &gt; %f.out</command>
+	<description>Decode .base64 file</description>
+	<patterns>*.BASE64;*.base64</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/status/network-wireless-encrypted.png</icon>
+	<name>Scan with ClamAV</name>
+	<unique-id>1396115279619353-3</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/clamav.sh %f</command>
+	<description>Perform a virusscan</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/mimetypes/application-certificate.png</icon>
+	<name>Android signature check</name>
+	<unique-id>1387790838920731-2</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/android-signature-check.sh %f</command>
+	<description>Manually verify an APK signature with jarsigner</description>
+	<patterns>*.apk;*.APK</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/edit-delete.png</icon>
+	<name>Shred files and folders</name>
+	<unique-id>1420447017034859-2</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/shred.sh %F</command>
+	<description>Shred files and folders</description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/document-properties.png</icon>
+	<name>Fix permissions for chrome</name>
+	<unique-id>1425541319704474-4</unique-id>
+	<command>xfce4-terminal -x /data/Lab/dotfiles/scripts/thunar/thunar/chrome-own.sh %F</command>
+	<description>Fix permissions for files downloaded as user chrome</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>/usr/share/icons/Tango/16x16/actions/document-save-as.png</icon>
+	<name>VirtualBox to KWM</name>
+	<unique-id>1431880714896796-5</unique-id>
+	<command>qemu-img convert -f vmdk -O qcow2 %f %f.qcow2</command>
+	<description>For use with http://dev.modern.ie/tools/vms/ vmdk to qcow2, first open ova file in VirtualBox once</description>
+	<patterns>*.vmdk</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+</actions>
