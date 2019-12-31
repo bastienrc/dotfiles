@@ -1,0 +1,198 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""                                                                          """
+"                               Vimrc Local                                    "
+"""                                                                          """
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Solarized
+" option name default optional
+" "normal"| "high" or "low"
+"------------------------------------------------
+let g:solarized_termcolors = 256
+" let g:solarized_termtrans  = 1
+" let g:solarized_degrade  = 0
+let g:solarized_bold       = 1
+let g:solarized_underline  = 1
+let g:solarized_italic     = 1
+let g:solarized_contrast   = "high"
+let g:solarized_visibility = "high"
+" ------------------------------------------------
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+colorscheme solarized
+
+
+source $HOME/.vim/abbreviations/abb.vim
+set dictionary+=$HOME/.vim/dictionary/mydico.dict
+
+
+" Plugins {
+
+    " SnipMate {
+        let g:snips_author = 'Bastienrc <bastienrc@laposte.net>'
+    " }
+
+    " Zen Coding {
+        let g:user_zen_settings = {
+        \  'lang' : 'fr',
+        \  'php' : {
+        \    'extends' : 'html',
+        \    'filters' : 'c',
+        \  },
+        \  'xml' : {
+        \    'extends' : 'html',
+        \  },
+        \}
+
+        "let g:user_zen_expandabbr_key = '<C-Tab>'
+    " }
+
+    " Session {
+        let g:session_autosave = 1
+        let g:session_autoload = 1
+        " La derniere session fermer sera celle ouverte par defaut
+        let g:session_default_to_last = 1
+    " }
+
+    " Shell {
+        "xolox#shell#is_fullscreen()
+    " }
+" }
+
+
+" """
+" Correction Orthographique
+"
+" Plugin réalisé a partir des articles de GNU/Linux 110 et 111
+"
+" """
+
+" Vérification Orthographique
+function! ToggleSpell()
+  if !exists("b:spell")
+    setlocal spell spelllang=fr
+    let b:spell = 1
+  else
+    setlocal nospell
+    unlet b:spell
+  endif
+endfunction
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""                                                                          """
+"                                  BÉPO                                        "
+"""                                                                          """
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" {W} -> [É]
+" ——————————
+" On remappe W sur É :
+noremap é w
+noremap É W
+" Corollaire, pour effacer/remplacer un mot quand on n’est pas au début (daé / laé).
+" (attention, cela diminue la réactivité du {A}…)
+noremap aé aw
+noremap aÉ aW
+" Pour faciliter les manipulations de fenêtres, on utilise {W} comme un Ctrl+W :
+noremap w <C-w>
+noremap W <C-w><C-w>
+
+
+" [HJKL] -> {CTSR}
+" ————————————————
+" {cr} = « gauche / droite »
+noremap c h
+noremap r l
+" {ts} = « haut / bas »
+noremap t j
+noremap s k
+" {CR} = « haut / bas de l'écran »
+noremap C H
+noremap R L
+" {TS} = « joindre / aide »
+noremap T J
+noremap S K
+
+
+" {HJKL} <- [CTSR]
+" ————————————————
+" {J} = « Jusqu'à »            (j = suivant, J = précédant)
+noremap j t
+noremap J T
+" {L} = « Change »             (l = attend un mvt, L = jusqu'à la fin de ligne)
+noremap l c
+noremap L C
+" {H} = « Remplace »           (h = un caractère slt, H = reste en « Remplace »)
+noremap h r
+noremap H R
+" {K} = « Substitue »          (k = caractère, K = ligne)
+noremap k s
+noremap K S
+
+
+" Désambiguation de {g}
+" —————————————————————
+" ligne écran précédente / suivante (à l'intérieur d'une phrase)
+noremap gs gk
+noremap gt gj
+" onglet précédant / suivant
+noremap gb gT
+noremap gé gt
+" optionnel : {gB} / {gÉ} pour aller au premier / dernier onglet
+noremap gB :exe "silent! tabfirst"<CR>
+noremap gÉ :exe "silent! tablast"<CR>
+" optionnel : {g"} pour aller au début de la ligne écran
+noremap g" g0
+
+
+" <> en direct
+" ————————————
+noremap « <
+noremap » >
+inoremap « <
+inoremap » >
+
+" Repli
+" ————————————————
+" suivant / précédent
+noremap zs zw
+noremap zt zj
+
+
+" Correction Orthographique
+" ——————————
+nmap <F12> :call ToggleSpell()<CR>
+imap <F12> <Esc>:call ToggleSpell()<CR>a
+" suivant / précédent
+noremap ]k ]s
+noremap [k [s
+
+
+" Lancer un navigateur web depuis Vim
+" ——————————
+" « v,d » et « v,s » lancent iceweasel et une recherche (définition ou synonyme) dans le tlfi sur le mot courant
+vmap ,d :<C-U>!iceweasel "http://www.cnrtl.fr/lexicographie/<cword>" >& /dev/null<CR><CR>
+vmap ,s :<C-U>!iceweasel "http://www.cnrtl.fr/synonymie/<cword>" >& /dev/null<CR><CR>
+
+" « v,g » comme ci-dessus mais pour google
+vmap ,g :<C-U>!iceweasel "http://www.google.fr/search?hl=fr&q=<cword>&btnG=Recherche+Google&meta=" >& /dev/null<CR><CR>
+
+"« v,w » comme ci-dessus mais pour wikipedia
+vmap ,w :<C-U>!iceweasel "http://fr.wikipedia.org/wiki/<cword>" >& /dev/null<CR><CR>
+
+" « v,c » comme ci-dessus mais pour le conjugueur
+vmap ,c :<C-U>!iceweasel "http://www.leconjugueur.com/php5/index.php?v=<cword>" >& /dev/null<CR><CR>
+
+" « v,o » ouvre l’url sur laquelle on se trouve dans iceweasel
+vmap ,o :<C-U>!iceweasel "<cfile>" >& /dev/null<CR><CR>
+
+
+" Copier / Coller
+" ——————————
+imap <C-c> "+y
+imap <C-v> "+p
