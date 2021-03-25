@@ -32,13 +32,15 @@ alias grep='grep --color=auto'
 # Alias pour mes scripts
 # alias majdroits='sudo sh ~/.scripts/majdroits'
 
-# Laradock
-alias laradock-up='cd /data/Lab/laradock && docker-compose up -d nginx mysql phpmyadmin workspace'
-alias laradock-down='cd /data/Lab/laradock && docker-compose down'
-
-# Portainer
-alias portainer-up='cd /data/Lab/Portainer && docker-compose up -d'
-alias portainer-down='cd /data/Lab/Portainer && docker-compose down'
-
 # Vim
 alias vimbundle='vim +BundleInstall! +BundleClean +q'
+
+# Docker
+alias dls='docker container ls'
+alias dlsa='docker container ls -a'
+alias dstopall='docker container stop $(docker container ls -aq)'
+alias drmall='docker container rm $(docker container ls -aq)'
+dshell(){
+    (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh)
+}
+

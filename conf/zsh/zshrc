@@ -18,7 +18,6 @@ DISABLE_UPDATE_PROMPT=true
 # Ajouter à bon escient, trop de plugins ralenti le démarrage du shell.
 plugins=(
   git
-  git-flow
   npm
 )
 
