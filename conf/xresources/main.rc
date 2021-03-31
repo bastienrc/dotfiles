@@ -1,0 +1,24 @@
+! Fichier de configuration principal
+!
+! Recharger la configuration : xrdb -merge ~/.Xresources
+!
+! Sources: 
+!     - https://artisan.karma-lab.net/installer-et-parametrer-urxvt
+
+!--------------!
+! Xft Settings !
+!--------------!
+
+Xft.antialias:              true
+Xft.dpi:                    96
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+Xft.rgba:                   rgb
+
+
+!----------!
+! Settings !
+!----------!
+
+#include "color.rc"
+#include "urxvt.rc"
