@@ -13,10 +13,10 @@ alias la='ls -a'
 alias lla='ls -la'
 
 # Git
-alias st='git status'
-alias pullr='git pull --rebase'
-alias pull='git pull'
-alias push='git push'
+#alias st='git status'
+#alias pullr='git pull --rebase'
+#alias pull='git pull'
+#alias push='git push'
 
 # Quelques alias pratiques
 alias c='clear'
@@ -44,3 +44,5 @@ dshell(){
     (docker container exec -ti $1 bash) || (docker container exec -ti $1 sh)
 }
 
+# PHP-CLI
+alias php='docker run -it --rm --name php-cli -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:alpine php'

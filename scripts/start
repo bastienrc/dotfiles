@@ -4,7 +4,11 @@
 
 # Démarage de mes containers
 # Laradock
-cd /data/Lab/laradock && docker-compose up -d nginx mysql phpmyadmin
+#cd /data/Lab/laradock && docker-compose up -d nginx mysql phpmyadmin
 
 # Portainer
-cd /data/Lab/Portainer && docker-compose up -d
+# cd /data/Lab/docker && docker-compose up -d && cd /data/Lab
+
+
+# Conky, lancement en daemon après une pause d'une seconde.
+cd /data/Lab/dotfiles/conf/conky && conky -d -p 5 -c conkyrc

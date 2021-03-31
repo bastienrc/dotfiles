@@ -1,15 +1,14 @@
 #!/bin/bash
-# Installation de ma configuration
+# Installation
+sudo apt-get install thunderbird zim git git-lfs rxvt-unicode vlc deja-dup freetuxtv grisbi filezilla keeppassxc krita zsh kanatest calibre redshift chromium liferea gimp inkscape vim mcomix
 
 # Couleur et avatar
 ln -sf `pwd`/conf/face ~/.face
-ln -sf `pwd`/conf/Xdefaults ~/.Xdefaults
 ln -sf `pwd`/conf/Xresources ~/.Xresources
 ln -sf `pwd`/conf/fonts ~/.fonts
 
 # Mes scripts
 ln -sf `pwd`/scripts ~/.scripts
-git submodule update --init
 
 # Git
 ln -sf `pwd`/conf/gitconfig ~/.gitconfig
@@ -18,12 +17,14 @@ ln -sf `pwd`/conf/gitconfig ~/.gitconfig
 ln -sf `pwd`/conf/npmrc ~/.npmrc
 
 # Zsh
-ln -sf `pwd`/conf/zsh/zshrc ~/.zshrc
-ln -sf `pwd`/conf/zsh/zshenv ~/.zshenv
-ln -sf `pwd`/conf/zsh/zlogin ~/.zlogin
-ln -sf `pwd`/conf/zsh/zlogout ~/.zlogout
-ln -sf `pwd`/externe/oh-my-zsh ~/.oh-my-zsh
 
-# Conky
-ln -sf `pwd`/conf/conky ~/.conky
-#conky -c ~/.conky/conkyrc
+## Installation de Oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## Plugins - Installation
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sudo apt-get install autojump
+
+## Custom
+ln -sf `pwd`/conf/zsh/zshrc ~/.zshrc

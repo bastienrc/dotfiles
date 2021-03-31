@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find $1 -name "*.jpg" -type f -exec cp {} ~/Images \;
+find $1 -name "*.png" -type f -exec cp {} ~/Images \;
