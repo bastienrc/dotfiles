@@ -29,9 +29,6 @@ alias rd='rmdir'
 alias upgrade='sudo aptitude update && sudo aptitude dist-upgrade && sudo aptitude clean'
 alias grep='grep --color=auto'
 
-# Alias pour mes scripts
-# alias majdroits='sudo sh ~/.scripts/majdroits'
-
 # Vim
 alias vimbundle='vim +BundleInstall! +BundleClean +q'
 
@@ -45,4 +42,4 @@ dshell(){
 }
 
 # PHP-CLI
-alias php='docker run -it --rm --name php-cli -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:alpine php'
+alias php='sh $HOME/.scripts/php'
