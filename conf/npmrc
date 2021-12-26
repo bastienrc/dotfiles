@@ -1,4 +1,4 @@
 init.author.name  = Sebastien Colbert
 init.author.email = colbertsebastien@gmail.com
 init.author.url   = https://sebastiencolbert.fr
-init.license      = CECILL-2.1
+init.license      = MIT

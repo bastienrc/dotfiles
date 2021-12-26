@@ -6,7 +6,8 @@
 
 [core]
   editor = code
-  
+	autocrlf = true
+
 [web]
   browser = google-chrome
 
@@ -19,8 +20,8 @@
 	remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold   # line info
+	meta = yellow
+	frag = magenta   			# line info
 	old = red             # deletions
 	new = green           # additions
 
@@ -44,12 +45,12 @@
 
 [commit]
 	gpgsign = true
-  
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-	
+
 [init]
 	defaultBranch = main

@@ -42,4 +42,8 @@ dshell(){
 }
 
 # PHP-CLI
-alias php='sh $HOME/.scripts/php'
+# alias php='sh $HOME/.scripts/php'
+
+# Archive en cbz chaque dossiers du répertoire courant
+alias zipcbz='find ./* -type d -exec zip -r {}.cbz {} \;'
+
